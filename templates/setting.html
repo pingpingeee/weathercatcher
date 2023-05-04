@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/setting_style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/cloud.png')}}" width="60">
+        </div>
+        <div class="box fade-in">
+            <ui>
+                <li>
+                    <a>
+                        <i1 class="fa-solid fa-clock"></i1>
+                        <div class="text">알람 시간 변경
+                            <div class="line"></div>
+                        </div>
+                    </a>
+                    <div class="alarm">
+                    </div>
+                </li>
+
+                <li>
+                    <a>
+                        <i1 class="fa-solid fa-map-marked-alt" id="setcity"></i1>
+                        <div class="text">거주 지역 변경</div>
+                    </a>
+                    </form>
+                </li>
+
+                <li>
+                    <a>
+                        <i1 class="fa-solid fa-pen"></i1>
+                        <div class="text">Test</div>
+                    </a>
+                </li>
+            </ui>
+        </div>
+        <!--<div class="mapbox">
+            <mmap class="fa-solid fa-location-dot"></mmap>
+            <input type="text" placeholder="지역을 입력하세요!">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>-->
+
+
+        <i id="menu" class="fa-solid fa-angle-double-up"></i>
+        <div id="menubox" class="menu-container">
+            <ul>
+                <a id="menuhome" class="fa-solid fa-home" href="{{url_for('home')}}"></a>
+                <a id="menumap" class="fa-solid fa-map" href="{{ url_for('map') }}"></a>
+                <a id="menuset" class="fa-solid fa-cog"></a>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./static/script/setting.js"></script>
+
+</html>

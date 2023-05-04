@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_join/join_style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/cloud.png')}}" width="60">
+            <div class="loginbox">웨더캐쳐에 오신 것을 환영합니다!</div>
+        </div>
+
+        <h1 class="logo-login bold">Weather Catcher</h1>
+        <div class="box2">
+            <div class="need  fade-in">
+                <h4 class="join-text bold">회원가입</h4>
+                <div class="box3">
+                    <!--회원가입-->
+                    <form method="post" class="postbox">
+                        <div class="input-group">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <input type="text" name="name" class="text-field-join" placeholder="이름입력" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="account" class="text-field-join" placeholder="아이디" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="password" class="text-field-join" placeholder="비밀번호" required>
+                        </div>
+                        {% if error_message %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error_message }}
+                        </div>
+                        {% endif %}
+                        <!-- <a href="{{ url_for('joinsuc') }}" class="btn-joinsuc" name="action" value="가입완료">가입완료</a> -->
+                        <input type="submit" value="가입완료" class="btn-joinsuc bold" name="action">
+                        <a href="{{ url_for('login') }}" class="btn-back bold">뒤로가기</a>
+                        <!-- <j class="fa-solid fa-check"></j> -->
+                    </form>
+                </div>
+            </div>
+            <!-- <h6 id="text">Only for Kr</h6> -->
+        </div>
+    </div>
+</body>
+
+</html>

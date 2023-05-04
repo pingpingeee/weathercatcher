@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/map_style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/cloud.png')}}" width="60">
+        </div>
+        <div class="box1">
+            <div class="fa-solid fa-sun"></div>
+            <div class="fa-solid fa-cloud"></div>
+            <div class="fa-solid fa-cloud-rain"></div>
+            <div class="fa-solid fa-cloud-showers-heavy"></div>
+            <div class="fa-solid fa-cloud-sun"></div>
+             <div class="fa-solid fa-cloud-sun-rain"></div>
+        </div>
+        <i id="menu" class="fa-solid fa-angle-double-up"></i>
+        <div id="menubox" class="menu-container">
+            <ul>
+                <a id="menuhome" class="fa-solid fa-home" href="{{url_for('home')}}"></a>
+                <a id="menumap" class="fa-solid fa-map"></a>
+                <a id="menuset" class="fa-solid fa-cog" href="{{ url_for('setting') }}"></a>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="./static/script/map.js"></script>
+
+</html>
