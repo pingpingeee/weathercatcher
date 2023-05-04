@@ -40,7 +40,7 @@ def setting():
 # 첫 접속시화면
 @app.route('/index', methods=['GET'])
 def start():
-    return render_template('./login_join/index.html')
+    return render_template('index.html')
 
 # 로그인화면
 @app.route('/login', methods=['GET', 'POST'])
