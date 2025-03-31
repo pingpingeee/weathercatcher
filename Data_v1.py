@@ -116,7 +116,7 @@ def map():
         region = data['region']
         if region:
             # 기본 세팅
-            apikey = "26e6bba66e0bbf92a5972deb09369a20"
+            apikey = ""
             lang = "kr"
             api = f"http://api.openweathermap.org/data/2.5/weather?q={region}&appid={apikey}&lang={lang}&units=metric"
 
